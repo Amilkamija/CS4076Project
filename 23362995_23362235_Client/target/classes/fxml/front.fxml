@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.project.client.controllers.FrontController"
+           style="-fx-background-color: rgb(255, 230, 230);">
+
+    <VBox alignment="CENTER" spacing="20.0"
+          style="-fx-background-color: #FFFFFF; -fx-background-radius: 40px; -fx-padding: 120px;"
+          maxWidth="450" maxHeight="450">
+        <effect>
+            <DropShadow color="rgba(0, 0, 0, 0.3)" radius="5" spread="0.05" offsetX="0" offsetY="2"/>
+        </effect>
+
+        <!-- Add Lecture -->
+        <Button fx:id="addLectureButton" text="+ Add Lecture" onAction="#handleAddLecture"
+                style="-fx-font-size: 14px;  -fx-background-color: #D9D9D9; -fx-text-fill: black;
+                       -fx-padding: 5px; -fx-background-radius: 95px;"
+                maxWidth="160" prefHeight="50"/>
+
+        <!-- Remove Lecture -->
+        <Button fx:id="removeLectureButton" text="- Remove Lecture" onAction="#handleRemoveLecture"
+                style="-fx-font-size: 14px;  -fx-background-color: #D9D9D9; -fx-text-fill: black;
+                       -fx-padding: 5px; -fx-background-radius: 95px;"
+                maxWidth="160" prefHeight="50"/>
+
+        <!-- Display Schedule -->
+        <Button fx:id="displayScheduleButton" text="Display Schedule" onAction="#handleDisplaySchedule"
+                style="-fx-font-size: 14px;  -fx-background-color: #D9D9D9; -fx-text-fill: black;
+                       -fx-padding: 5px; -fx-background-radius: 95px;"
+                maxWidth="160" prefHeight="50"/>
+
+        <!-- Other -->
+        <Button fx:id="otherButton" text="Other" onAction="#handleOther"
+                style="-fx-font-size: 14px;  -fx-background-color: #D9D9D9; -fx-text-fill: black;
+                       -fx-padding: 5px; -fx-background-radius: 95px;"
+                maxWidth="160" prefHeight="50"/>
+    </VBox>
+</StackPane>
+
+

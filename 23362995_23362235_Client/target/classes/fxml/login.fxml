@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.project.client.controllers.LoginController"
+           style="-fx-background-color: rgb(255, 230, 230);">
+
+    <VBox alignment="CENTER" spacing="20.0"
+          style="-fx-background-color: #FFFFFF; -fx-background-radius: 40px; -fx-padding: 120px;"
+          maxWidth="450" maxHeight="350">
+        <effect>
+            <DropShadow color="rgba(0, 0, 0, 0.3)" radius="5" spread="0.05" offsetX="0" offsetY="2"/>
+        </effect>
+
+        <!-- Course Code Label -->
+        <Label fx:id="courseCodeLabel" text="Enter Course Code:" 
+               style="-fx-font-family: 'Imbue'; -fx-font-size: 18px;" />
+
+        <!-- Course Code TextField -->
+        <TextField fx:id="courseCodeField" promptText="Enter Course Code" 
+                  style="-fx-font-family: 'Imbue'; -fx-font-size: 14px; 
+                         -fx-padding: 5px; -fx-background-color: #D9D9D9; 
+                         -fx-background-radius: 95px;" maxWidth="160"/>
+
+        <!-- Login Button -->
+        <Button fx:id="loginButton" text="Login" onAction="#onLoginButtonClick"
+                style="-fx-font-family: 'Imbue'; -fx-font-size: 14px;  
+                       -fx-background-color: #D9D9D9; -fx-text-fill: black;
+                       -fx-padding: 5px; -fx-background-radius: 95px;"
+                maxWidth="160" prefHeight="50"/>
+    </VBox>
+</StackPane>

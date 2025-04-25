@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.project.server.ServerMonitor">
+
+    <top>
+        <!-- Top bar for Back and Refresh -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <Button fx:id="backButton" text="Back" onAction="#handleBackAction"
+                    style="-fx-background-color: #D3D3D3; -fx-font-size: 14px; -fx-padding: 8 16;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="refreshButton" text="Refresh" onAction="#handleRefreshAction"
+                    style="-fx-background-color: #D3D3D3; -fx-font-size: 14px; -fx-padding: 8 16;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="15" style="-fx-padding: 20; -fx-background-color: #F8D7DA;">
+
+            <!-- Connected Clients Section as TextArea -->
+            <VBox spacing="5">
+                <Label text="Connected Clients:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <TextArea fx:id="connectedClientsArea" editable="false" wrapText="true"
+                          style="-fx-font-size: 14px; -fx-background-color: white;" prefHeight="200"/>
+            </VBox>
+
+            <!-- Log Messages Section -->
+            <VBox spacing="5">
+                <Label text="Log Messages:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <TextArea fx:id="logMessagesArea" editable="false" wrapText="true"
+                          style="-fx-font-size: 14px; -fx-background-color: white;" prefHeight="200"/>
+            </VBox>
+        </VBox>
+    </center>
+
+</BorderPane>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Server",
+      "request": "launch",
+      "mainClass": "com.project.server/com.project.server.Server",
+      "projectName": "Server"
+    },
+    {
+      "type": "java",
+      "name": "Main (Server GUI)",
+      "request": "launch",
+      "mainClass": "com.project.server/com.project.server.Main",
+      "projectName": "Server",
+      "vmArgs": "--module-path \"C:/Program Files/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "Server Backend",
+      "request": "launch",
+      "mainClass": "com.project.server.Server",
+      "projectName": "Server",
+      "vmArgs": "--module-path \"C:/Program Files/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "Launch Client",
+      "request": "launch",
+      "mainClass": "com.project.client.Main",
+      "projectName": "Client",
+      "vmArgs": "--module-path \"C:/Program Files/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+
+    }
+  ]
+}
+
+  

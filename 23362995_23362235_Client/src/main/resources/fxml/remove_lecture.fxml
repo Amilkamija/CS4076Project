@@ -1,0 +1,52 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.project.client.controllers.RemoveLectureController"
+           style="-fx-background-color: rgb(255, 230, 230);">
+
+    <VBox alignment="CENTER" spacing="20.0"
+          style="-fx-background-color: #FFFFFF; -fx-background-radius: 40px; -fx-padding: 40px;"
+          maxWidth="450" maxHeight="450">
+        <effect>
+            <DropShadow color="rgba(0, 0, 0, 0.3)" radius="5" spread="0.05" offsetX="0" offsetY="2"/>
+        </effect>
+
+        <!-- Date -->
+        <ComboBox fx:id="dateComboBox" promptText="Select Day" style="-fx-font-size: 14px; -fx-padding: 5px; -fx-background-color: #D9D9D9; -fx-background-radius: 95px;" maxWidth="160">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Monday"/>
+                    <String fx:value="Tuesday"/>
+                    <String fx:value="Wednesday"/>
+                    <String fx:value="Thursday"/>
+                    <String fx:value="Friday"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- Time -->
+        <ComboBox fx:id="timeComboBox" promptText="Select Time" style="-fx-font-size: 14px; -fx-padding: 5px; -fx-background-color: #D9D9D9; -fx-background-radius: 95px;" maxWidth="160"/>
+
+        <!-- ModuleCode -->
+        <TextField fx:id="moduleCodeField" promptText="Enter Module Code" style="-fx-font-size: 14px; -fx-padding: 5px; -fx-background-color: #D9D9D9; -fx-background-radius: 95px;" maxWidth="160"/>
+
+        <!-- Room(Number)  -->
+        <TextField fx:id="roomCodeField" promptText="Enter Room Number" style="-fx-font-size: 14px; -fx-padding: 5px; -fx-background-color: #D9D9D9; -fx-background-radius: 95px;" maxWidth="160"/>
+
+        <!-- Submit & Cancel -->
+        <HBox spacing="30.0" alignment="CENTER">
+            <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel"
+                    style="-fx-font-size: 14px; -fx-background-color: #D9D9D9; -fx-text-fill: black; -fx-background-radius: 95px;"  prefHeight="50"/>
+            <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit"
+                    style="-fx-font-size: 14px; -fx-background-color: #D9D9D9; -fx-text-fill: black; -fx-background-radius: 95px;"  prefHeight="50"/>
+        </HBox>
+    </VBox>
+</StackPane>
